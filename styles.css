@@ -37,11 +37,13 @@ html {
 }
 
 .icon {
+  position: absolute;
+  left: 10px;
+  bottom: 30%;
   height: 20px;
   width: 30px;
   cursor: pointer;
   filter: contrast(0) brightness(0) invert(1);
-  margin-top: 5px;
 }
 
 .introduction {
@@ -74,6 +76,7 @@ html {
 a {
   text-decoration: none;
   color: #fff;
+  position: relative;
 }
 
 .link > .button {
@@ -103,8 +106,8 @@ a {
 @media screen and (max-width: 768px) {
   body,
   html {
-    height: auto;
-    padding: 20px 0;
+    height: 100vh;
+    padding: 0;
   }
 
   .main {
@@ -112,7 +115,9 @@ a {
     height: auto;
     min-height: 600px;
     padding: 30px 15px;
-    margin: 20px 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 95vh;
   }
 
   .main:hover {
