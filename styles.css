@@ -36,6 +36,14 @@ html {
   transform: scale(1.025);
 }
 
+.icon {
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  filter: contrast(0) brightness(0) invert(1);
+  margin-top: 5px;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
