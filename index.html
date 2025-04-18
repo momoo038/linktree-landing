@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="styles.css" />
     <title>MOMO | Home</title>
   </head>
-  <body>
+  <body>      
+
     <div class="main">
       <div class="introduction">
         <div class="logo">
@@ -70,38 +71,36 @@
           ></a>
         </div>
       </div>
-      <div id="popup" class="popup">
-        Discord username "momo038" copied to clipboard!
-      </div>
-
-      <script>
-        function copyDiscord() {
-          const discordUsername = "momo038";
-          navigator.clipboard
-            .writeText(discordUsername)
-            .then(() => {
-              showPopup(
-                `Discord username "${discordUsername}" copied to clipboard!`
-              );
-            })
-            .catch((err) => {
-              console.error("Failed to copy text: ", err);
-              showPopup(
-                `Couldn't copy to clipboard. Discord username is: ${discordUsername}`
-              );
-            });
-        }
-
-        function showPopup(message) {
-          const popup = document.getElementById("popup");
-          popup.textContent = message;
-          popup.className = "popup show";
-
-          setTimeout(() => {
-            popup.className = popup.className.replace("show", "");
-          }, 3000);
-        }
-      </script>
     </div>
+    <div id="popup" class="popup">
+      Discord username "momo038" copied to clipboard!
+    </div>
+    <script>
+      function copyDiscord() {
+        const discordUsername = "momo038";
+        navigator.clipboard
+          .writeText(discordUsername)
+          .then(() => {
+            showPopup(
+              `Discord username "${discordUsername}" copied to clipboard!`
+            );
+          })
+          .catch((err) => {
+            console.error("Failed to copy text: ", err);
+            showPopup(
+              `Couldn't copy to clipboard. Discord username is: ${discordUsername}`
+            );
+          });
+      }
+      function showPopup(message) {
+        const popup = document.getElementById("popup");
+        popup.textContent = message;
+        popup.className = "popup show";
+
+        setTimeout(() => {
+          popup.className = popup.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
   </body>
 </html>
