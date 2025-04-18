@@ -164,19 +164,17 @@ a {
   padding: 16px;
   position: fixed;
   z-index: 9999;
-  top: -60px;
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%);
   transition: opacity 0.3s ease, transform 0.4s ease, visibility 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 16px;
   opacity: 0;
-  pointer-events: none;
 }
 
 .popup.show {
   visibility: visible;
   opacity: 1;
   transform: translateX(-50%) translateY(80px);
-  pointer-events: auto;
 }
