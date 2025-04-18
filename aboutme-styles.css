@@ -41,7 +41,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 10px;
 }
 
 .introduction > .name {
@@ -49,7 +49,7 @@ html {
   font-weight: 700;
 }
 
-.introduction > .location {
+.introduction > .title {
   font-size: 1.25rem;
   font-weight: 500;
   color: #ffffff;
@@ -68,7 +68,7 @@ a {
   color: #fff;
 }
 
-.link > .button {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,10 +84,33 @@ a {
   margin-top: 15px;
 }
 
-.link > .button:hover {
+.button:hover {
   background-color: rgb(63, 63, 63);
 }
 
-.link > .button:active {
+.button:active {
   background-color: rgb(55, 55, 55);
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.description> p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
 }
