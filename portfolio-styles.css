@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, Arial, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  background-color: rgba(20, 20, 20, 1);
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: rgba(31, 31, 31, 1);
+  width: 450px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgb(63, 63, 63) 0px 5px 15px;
+  transition: transform 1s ease-in-out;
+}
+.main:hover {
+  transform: scale(1.025);
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.introduction > .name {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.introduction > .title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff,
+    0 0 150px rgb(255, 255, 255);
+}
+
+.introduction > .logo > img {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  margin-bottom: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 49, 49);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 375px;
+  height: 55px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: rgb(63, 63, 63);
+}
+
+.button:active {
+  background-color: rgb(55, 55, 55);
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 75px 0;
+}
+
+.description > p {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0 20px;
+  text-align: center;
+}
+.description > .desc-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .main {
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+    padding: 30px 15px;
+    margin: 20px 0;
+  }
+
+  .main:hover {
+    transform: none;
+  }
+
+  .introduction {
+    margin-bottom: 30px;
+  }
+
+  .introduction > .name {
+    font-size: 1.5rem;
+  }
+
+  .introduction > .location {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .introduction > .logo > img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .link > .button {
+    width: 300px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .main {
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+    padding: 30px 15px;
+    margin: 20px 0;
+  }
+
+  .main:hover {
+    transform: none;
+  }
+
+  .introduction {
+    margin-bottom: 30px;
+  }
+
+  .introduction > .name {
+    font-size: 1.5rem;
+  }
+
+  .introduction > .title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .introduction > .logo > img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .button {
+    width: 300px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
