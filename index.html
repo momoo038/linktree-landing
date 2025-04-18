@@ -22,41 +22,86 @@
       </div>
       <div class="link-tree">
         <div class="link">
-          <a href="portfolio.html" class="button">Portfolio<span><img src="assets/arrow-right.svg" alt="copy-icon" class="icon"></span></a>
+          <a href="portfolio.html" class="button"
+            >Portfolio<span
+              ><img
+                src="assets/arrow-right.svg"
+                alt="copy-icon"
+                class="icon" /></span
+          ></a>
         </div>
         <div class="link">
-          <a href="aboutme.html" class="button">About Me<span><img src="assets/arrow-right.svg" alt="copy-icon" class="icon"></span></a>
+          <a href="aboutme.html" class="button"
+            >About Me<span
+              ><img
+                src="assets/arrow-right.svg"
+                alt="copy-icon"
+                class="icon" /></span
+          ></a>
         </div>
         <div class="link">
           <a href="https://github.com/momoo038" target="_blank" class="button"
-            >GitHub<span><img src="assets/arrow-top-right.svg" alt="copy-icon" class="icon"></span></a
-          >
+            >GitHub<span
+              ><img
+                src="assets/arrow-top-right.svg"
+                alt="copy-icon"
+                class="icon" /></span
+          ></a>
         </div>
         <div class="link">
           <a
             href="https://www.linkedin.com/in/denal-omerovi%C4%87-88a607356/"
             target="_blank"
             class="button"
-            >LinkedIn<span><img src="assets/arrow-top-right.svg" alt="copy-icon" class="icon"></span></a
-          >
+            >LinkedIn<span
+              ><img
+                src="assets/arrow-top-right.svg"
+                alt="copy-icon"
+                class="icon" /></span
+          ></a>
         </div>
         <div class="link">
-          <a href="#" class="button" onclick="copyDiscord()">Discord<span><img src="assets/content-copy.svg" alt="copy-icon" class="icon"></span></a>
+          <a href="#" class="button" onclick="copyDiscord()"
+            >Discord<span
+              ><img
+                src="assets/content-copy.svg"
+                alt="copy-icon"
+                class="icon" /></span
+          ></a>
         </div>
-        <script>
-            function copyDiscord() {
-              const discordUsername = "momo038";
-              navigator.clipboard.writeText(discordUsername)
-                .then(() => {
-                  alert(`Discord username "${discordUsername}" copied to clipboard!`);
-                })
-                .catch(err => {
-                  console.error('Failed to copy text: ', err);
-                  alert(`Couldn't copy to clipboard. Discord username is:  ${discordUsername}`);
-                });
-            }
-          </script>
       </div>
+      <div id="popup" class="popup">
+        Discord username "momo038" copied to clipboard!
+      </div>
+
+      <script>
+        function copyDiscord() {
+          const discordUsername = "momo038";
+          navigator.clipboard
+            .writeText(discordUsername)
+            .then(() => {
+              showPopup(
+                `Discord username "${discordUsername}" copied to clipboard!`
+              );
+            })
+            .catch((err) => {
+              console.error("Failed to copy text: ", err);
+              showPopup(
+                `Couldn't copy to clipboard. Discord username is: ${discordUsername}`
+              );
+            });
+        }
+
+        function showPopup(message) {
+          const popup = document.getElementById("popup");
+          popup.textContent = message;
+          popup.className = "popup show";
+
+          setTimeout(() => {
+            popup.className = popup.className.replace("show", "");
+          }, 3000);
+        }
+      </script>
     </div>
   </body>
 </html>
