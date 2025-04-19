@@ -11,7 +11,13 @@
 
 body,
 html {
-  background: radial-gradient(circle at center, rgba(28, 28, 30, 1) 10%, rgba(22, 22, 24, 0.95) 20%, rgba(18, 18, 20, 1) 60%, rgba(16, 16, 18, 1) 100%);
+  background: radial-gradient(
+    circle at center,
+    rgba(28, 28, 30, 1) 10%,
+    rgba(22, 22, 24, 0.95) 20%,
+    rgba(18, 18, 20, 1) 60%,
+    rgba(16, 16, 18, 1) 100%
+  );
   color: #fff;
   height: 100vh;
   width: 100vw;
@@ -65,7 +71,8 @@ html {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -82,13 +89,16 @@ html {
 }
 
 @keyframes breathe {
-  0%, 100% {
+  0%,
+  100% {
     border-color: rgba(227, 76, 38, 0.6);
-    box-shadow: 0 0 2px rgba(227, 76, 38, 0.6), 0 0 4px rgba(227, 76, 38, 0.4), 0 0 6px rgba(227, 76, 38, 0.3);
+    box-shadow: 0 0 2px rgba(227, 76, 38, 0.6), 0 0 4px rgba(227, 76, 38, 0.4),
+      0 0 6px rgba(227, 76, 38, 0.3);
   }
   50% {
     border-color: rgba(227, 76, 38, 0.8);
-    box-shadow: 0 0 5px rgba(227, 76, 38, 0.8), 0 0 10px rgba(227, 76, 38, 0.6), 0 0 15px rgba(227, 76, 38, 0.5);
+    box-shadow: 0 0 5px rgba(227, 76, 38, 0.8), 0 0 10px rgba(227, 76, 38, 0.6),
+      0 0 15px rgba(227, 76, 38, 0.5);
   }
 }
 a {
@@ -108,10 +118,9 @@ a {
   height: 55px;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: pointer; 
+  cursor: pointer;
   margin-top: 15px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-
 }
 
 .button:hover {
@@ -197,6 +206,10 @@ a {
     height: 50px;
     font-size: 1rem;
   }
+  .button:active {
+    background-color: rgb(55, 55, 55);
+    scale: 1.015;
+  }
 
   .description > p {
     padding: 0 15px;
@@ -217,4 +230,4 @@ a {
     background-color: rgba(31, 31, 31, 1);
     box-shadow: rgb(63, 63, 63) 0px 5px 15px;
   }
-} 
+}

@@ -120,10 +120,9 @@ a {
   height: 55px;
   font-size: 1.1rem;
   font-weight: bold;
-  cursor: pointer; 
+  cursor: pointer;
   margin-top: 15px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-
 }
 
 .link > .button:hover {
@@ -195,6 +194,10 @@ a {
     width: 300px;
     height: 50px;
     font-size: 1rem;
+  }
+
+  .link > .button:active {
+    background-color: rgb(55, 55, 55);
   }
 }
 
