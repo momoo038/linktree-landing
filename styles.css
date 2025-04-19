@@ -40,7 +40,6 @@ html {
   box-shadow: rgb(63, 63, 63) 0px 5px 15px;
   transition: transform 1s ease-in-out;
   overflow: auto;
-  animation: subtleGlow 3s ease-in-out infinite;
   z-index: 5000;
 }
 .main:hover {
