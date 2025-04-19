@@ -193,14 +193,28 @@ a {
     width: 300px;
     height: 50px;
     font-size: 1rem;
+    transition: transform 0.1s ease; 
+  }
+
+  .link > .button:hover {
+    background-color: rgb(49, 49, 49) !important;
+    transform: none !important;
+    scale: 1 !important;
   }
 
   .link > .button:active {
-    background-color: transparent;
-    transform: none;
-    scale: 1;
+    transform: scale(1.05) !important;
+    background-color: rgb(55, 55, 55) !important;
+    transition: transform 0.02s ease !important;
   }
 }
+
+@keyframes buttonPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 
 .popup {
   visibility: hidden;

@@ -206,8 +206,7 @@ a {
     font-size: 1rem;
   }
   .button:active {
-    background-color: rgb(55, 55, 55);
-    scale: 1.015;
+    background-color: rgb(55, 55, 55) !important;
   }
 
   .description > p {
@@ -338,5 +337,5 @@ a {
 }
 
 #app {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
 }
