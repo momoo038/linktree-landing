@@ -38,12 +38,8 @@ html {
   align-items: center;
   border-radius: 10px;
   box-shadow: rgb(63, 63, 63) 0px 5px 15px;
-  transition: transform 1s ease-in-out;
   overflow: auto;
   z-index: 5000;
-}
-.main:hover {
-  transform: scale(1.025);
 }
 
 .introduction {
