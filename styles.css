@@ -11,13 +11,14 @@
 
 body,
 html {
-  background-color: rgba(20, 20, 20, 1);
+  background: radial-gradient(circle at center, rgba(28, 28, 30, 1) 10%, rgba(22, 22, 24, 0.95) 20%, rgba(18, 18, 20, 1) 60%, rgba(16, 16, 18, 1) 100%);
   color: #fff;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .main {
@@ -33,6 +34,8 @@ html {
   box-shadow: rgb(63, 63, 63) 0px 5px 15px;
   transition: transform 1s ease-in-out;
   overflow: auto;
+  animation: subtleGlow 3s ease-in-out infinite;
+  z-index: 5000;
 }
 .main:hover {
   transform: scale(1.025);
@@ -61,12 +64,23 @@ html {
   font-weight: 700;
 }
 
-.introduction > .location {
+.introduction > .title {
   font-size: 1.25rem;
   font-weight: 500;
   color: #ffffff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff,
     0 0 150px rgb(255, 255, 255);
+  animation: float 3s ease-in-out infinite;
+  margin-top: 10px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .introduction > .logo > img {
@@ -74,6 +88,18 @@ html {
   border-radius: 20px;
   margin-bottom: 35px;
   box-shadow: rgb(63, 63, 63) 0px 5px 15px;
+  animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    border-color: rgba(227, 76, 38, 0.6);
+    box-shadow: 0 0 2px rgba(227, 76, 38, 0.6), 0 0 4px rgba(227, 76, 38, 0.4), 0 0 6px rgba(227, 76, 38, 0.3);
+  }
+  50% {
+    border-color: rgba(227, 76, 38, 0.8);
+    box-shadow: 0 0 5px rgba(227, 76, 38, 0.8), 0 0 10px rgba(227, 76, 38, 0.6), 0 0 15px rgba(227, 76, 38, 0.5);
+  }
 }
 
 a {
@@ -184,3 +210,19 @@ a {
   opacity: 1;
   transform: translateX(-50%) translateY(30px);
 }
+
+/* Animations */
+@keyframes subtleGlow {
+  0% {
+    background-color: rgba(31, 31, 31, 1);
+    box-shadow: rgb(63, 63, 63) 0px 5px 15px;
+  }
+  50% {
+    background-color: rgba(33, 33, 35, 1);
+    box-shadow: rgb(63, 63, 63) 0px 8px 20px;
+  }
+  100% {
+    background-color: rgba(31, 31, 31, 1);
+    box-shadow: rgb(63, 63, 63) 0px 5px 15px;
+  }
+} 
